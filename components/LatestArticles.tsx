@@ -15,7 +15,7 @@ export default function LatestArticles() {
         <div className="text-center mb-12">
           <h2 className="text-3xl md:text-4xl font-bold mb-4">最新文章</h2>
           <p className="text-gray-600 dark:text-gray-400">
-            同步自微信公众号"小秦文化角"
+            同步自微信公众号&ldquo;小秦文化角&rdquo;
           </p>
         </div>
 

@@ -115,7 +115,7 @@ export default async function ArticlePage({ params }: ArticlePageProps) {
       {/* Footer Notice */}
       <div className="border-t border-black/[.08] dark:border-white/[.145] pt-8 mb-16">
         <p className="text-sm text-gray-600 dark:text-gray-400 text-center">
-          本文同步自微信公众号"小秦文化角"，欢迎关注获取更多精彩内容
+          本文同步自微信公众号&ldquo;小秦文化角&rdquo;，欢迎关注获取更多精彩内容
         </p>
       </div>
 

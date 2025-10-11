@@ -11,7 +11,7 @@ export default function ArticlesPage() {
       <div className="mb-12">
         <h1 className="text-4xl md:text-5xl font-bold mb-4">文章列表</h1>
         <p className="text-gray-600 dark:text-gray-400">
-          探索秦皇岛的历史文化与美景，同步自微信公众号"小秦文化角"
+          探索秦皇岛的历史文化与美景，同步自微信公众号&ldquo;小秦文化角&rdquo;
         </p>
       </div>
 
