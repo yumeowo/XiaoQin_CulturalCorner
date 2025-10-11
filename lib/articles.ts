@@ -30,7 +30,7 @@ export function getAllArticles(): Article[] {
   }
 
   const fileNames = fs.readdirSync(articlesDirectory);
-  const articles = fileNames
+  return fileNames
     .filter((fileName) => fileName.endsWith(".md"))
     .map((fileName) => {
       const slug = fileName.replace(/\.md$/, "");
@@ -38,9 +38,7 @@ export function getAllArticles(): Article[] {
     })
     .filter((article): article is Article => article !== null)
     .filter((article) => article.published)
-    .sort((a, b) => (new Date(a.date) > new Date(b.date) ? -1 : 1));
-
-  return articles;
+    .sort((a, b) => (new Date(a.date) > new Date(b.date)? -1 : 1));
 }
 
 /**

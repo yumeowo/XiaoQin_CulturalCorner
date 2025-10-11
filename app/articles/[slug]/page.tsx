@@ -8,6 +8,7 @@ import {
   getAllArticles,
   getRelatedArticles,
 } from "@/lib/articles";
+import { Metadata } from "next";
 
 interface ArticlePageProps {
   params: Promise<{
@@ -22,7 +23,7 @@ export async function generateStaticParams() {
   }));
 }
 
-export async function generateMetadata({ params }: ArticlePageProps) {
+export async function generateMetadata({ params }: ArticlePageProps): Promise<Metadata> {
   const { slug } = await params;
   const article = getArticleBySlug(slug);
 

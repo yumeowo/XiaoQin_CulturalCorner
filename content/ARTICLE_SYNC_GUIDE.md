@@ -59,24 +59,24 @@ published: true
 
 ### 4. Front Matter字段说明
 
-| 字段 | 必填 | 说明 |
-|------|------|------|
-| title | ✅ | 文章标题 |
-| slug | ✅ | URL路径，使用英文和连字符 |
-| date | ✅ | 发布日期，格式：YYYY-MM-DD |
-| author | ✅ | 作者名称，通常为"小秦文化角" |
-| category | ✅ | 分类：景点/文化/美食/活动 |
-| tags | ✅ | 标签数组，建议3-5个 |
-| coverImage | ❌ | 封面图片路径 |
-| excerpt | ✅ | 文章摘要 |
-| published | ✅ | 是否发布，true/false |
+| 字段         | 必填 | 说明                 |
+|------------|----|--------------------|
+| title      | ✅  | 文章标题               |
+| slug       | ✅  | URL路径，使用英文和连字符     |
+| date       | ✅  | 发布日期，格式：YYYY-MM-DD |
+| author     | ✅  | 作者名称，通常为"小秦文化角"    |
+| category   | ✅  | 分类：景点/文化/美食/活动     |
+| tags       | ✅  | 标签数组，建议3-5个        |
+| coverImage | ❌  | 封面图片路径             |
+| excerpt    | ✅  | 文章摘要               |
+| published  | ✅  | 是否发布，true/false    |
 
 ### 5. 图片处理
 
 1. 将图片保存到 `public/images/articles/` 目录
 2. 在Markdown中引用：
    ```markdown
-   ![图片描述](/images/articles/image-name.jpg)
+   ![图片描述]()
    ```
 
 ### 6. 提交到Git
@@ -108,7 +108,7 @@ git push
 ### 基础语法
 - **粗体** `**粗体**`
 - *斜体* `*斜体*`
-- [链接](url) `[链接](url)`
+- [链接]() `[链接](url)`
 - `代码` `` `代码` ``
 
 ### 标题
@@ -140,11 +140,10 @@ const hello = "world";
 ````
 
 ### 表格
-```markdown
-| 列1 | 列2 | 列3 |
-|-----|-----|-----|
-| 内容1 | 内容2 | 内容3 |
-```
+| A | B | C |
+|---|---|---|
+|   |   |   |
+|   |   |   |
 
 ### 分隔线
 ```markdown
