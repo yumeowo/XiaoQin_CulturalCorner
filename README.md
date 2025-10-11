@@ -1,36 +1,96 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# 📜 小秦文化角 | Qinhuangdao Culture Hub
 
-## Getting Started
+> 探索秦皇岛的魅力！从山海关的雄伟到北戴河的浪漫，这里是您了解秦皇岛历史、文化和旅游景点的数字窗口。
 
-First, run the development server:
+---
+
+## ✨ 项目简介
+
+| 特性      | 详情                                                       |
+|:--------|:---------------------------------------------------------|
+| **主题**  | 秦皇岛（Qinhuangdao）旅游与文化                                    |
+| **内容**  | 旅游景点介绍、当地历史、特色美食、文化活动等。                                  |
+| **受众**  | 计划前往秦皇岛的游客、文化爱好者、本地居民。                                   |
+| **技术栈** | **Next.js** (React 框架), **TypeScript**, **Tailwind CSS** |
+
+---
+
+## 🎯 网站用途
+
+1.  **💡 灵感发现者：** 提供秦皇岛最新的旅游资讯和深度文化解读，帮助用户规划行程。
+2.  **📚 文化学习站：** 集中展示秦皇岛的历史沿革、非物质文化遗产和特色民俗。
+3.  **🗺️ 交互式指南：** 提供景点地图、交通指引和实时活动信息（*如果未来有此功能*）。
+4.  **📱 优秀的用户体验：** 基于 **Next.js** 的高性能，提供快速加载和优秀的用户界面。
+
+---
+
+## 💻 开发人员指南
+
+### 🚀 快速启动项目
+
+本项目使用 **Next.js** 框架，因此您需要 **Node.js** 和 **pnpm** 环境。
+
+**1. 克隆仓库**
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+git clone [您的仓库地址]
+cd xiaoqin-culture-hub
+````
+
+**2. 安装依赖**
+
+```bash
+# 使用 pnpm
+pnpm install
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+**3. 启动开发服务器**
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+```bash
+# 启动 Next.js 开发服务器
+pnpm run dev
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+项目将在 `http://localhost:3000` 启动并运行。
 
-## Learn More
+### ⚙️ 技术栈和开发方法
 
-To learn more about Next.js, take a look at the following resources:
+| 模块       | 技术 / 方法                                       | 描述                                           |
+|:---------|:----------------------------------------------|:---------------------------------------------|
+| **框架**   | **Next.js** (App Router/Pages Router)         | 用于路由、服务器端渲染 (SSR) 或静态生成 (SSG)，确保高性能和 SEO 友好。 |
+| **样式**   | **Tailwind CSS**                              | 采用模块化和响应式设计，实现快速、一致的界面开发。                    |
+| **数据源**  | **Markdown 文件/Headless CMS/本地 JSON**          | 内容与代码分离，方便内容编辑和管理。                           |
+| **状态管理** | **React Context / Redux / Zustand** (根据项目复杂性) | 有效管理用户偏好、搜索状态等全局状态。                          |
+| **组件化**  | **原子设计原则**                                    | 将 UI 拆分为可复用的小组件，提高开发效率和代码可维护性。               |
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+### 📂 文件结构（关键目录）
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+```
+xiaoqin-culture-hub/
+├── components/          # 🧩 可复用的 UI 组件 (如 Header, Card, Footer)
+├── public/              # 🖼️ 静态资源 (图片、字体、Manifest 文件)
+├── app/                 # 📄 Next.js 页面或路由
+├── styles/              # 🎨 全局 CSS 或 Tailwind 配置
+├── content/             # 📝 存放 Markdown 或 JSON 格式的文化/景点内容
+└── lib/                 # 🛠️ 工具函数、API 调用等 (如获取内容的函数)
+```
 
-## Deploy on Vercel
+-----
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## 🤝 贡献指南
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+我们欢迎所有对秦皇岛文化和 Next.js 开发感兴趣的朋友加入！
+
+1.  **🍴 Fork** 本仓库。
+2.  **🆕 创建新的分支** (`git checkout -b feature/AmazingFeature`)。
+3.  **✨ 提交您的修改** (`git commit -m 'Add some AmazingFeature'`)。
+4.  **推送** 到您的分支 (`git push origin feature/AmazingFeature`)。
+5.  **📥 开启 Pull Request** 并详细描述您的贡献。
+
+-----
+
+## 📞 联系我们
+
+项目维护者：悠梦
+
+📧 邮箱：2839681263@qq.com
