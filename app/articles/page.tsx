@@ -1,9 +1,24 @@
 import Link from "next/link";
 import Image from "next/image";
-import { getAllArticles, getAllCategories } from "@/lib/articles";
+import {
+  getAllArticles,
+  getAllCategories,
+  getArticlesByCategory,
+} from "@/lib/articles";
 
-export default function ArticlesPage() {
-  const articles = getAllArticles();
+type SearchParams = Promise<{ [key: string]: string | string[] | undefined }>;
+
+export default async function ArticlesPage(props: {
+  searchParams: SearchParams;
+}) {
+  const searchParams = await props.searchParams;
+  const selectedCategory = searchParams.category as string | undefined;
+
+  // Filter articles based on selected category
+  const articles = selectedCategory
+    ? getArticlesByCategory(selectedCategory)
+    : getAllArticles();
+
   const categories = getAllCategories();
 
   return (
@@ -21,7 +36,11 @@ export default function ArticlesPage() {
         <div className="mb-8 flex flex-wrap gap-3">
           <Link
             href="/articles"
-            className="px-4 py-2 rounded-full text-sm border border-black/[.08] dark:border-white/[.145] hover:bg-black/[.05] dark:hover:bg-white/[.06] transition-colors"
+            className={`px-4 py-2 rounded-full text-sm border transition-colors ${
+              !selectedCategory
+                ? "bg-black text-white dark:bg-white dark:text-black border-black dark:border-white"
+                : "border-black/[.08] dark:border-white/[.145] hover:bg-black/[.05] dark:hover:bg-white/[.06]"
+            }`}
           >
             全部
           </Link>
@@ -29,7 +48,11 @@ export default function ArticlesPage() {
             <Link
               key={category}
               href={`/articles?category=${category}`}
-              className="px-4 py-2 rounded-full text-sm border border-black/[.08] dark:border-white/[.145] hover:bg-black/[.05] dark:hover:bg-white/[.06] transition-colors"
+              className={`px-4 py-2 rounded-full text-sm border transition-colors ${
+                selectedCategory === category
+                  ? "bg-black text-white dark:bg-white dark:text-black border-black dark:border-white"
+                  : "border-black/[.08] dark:border-white/[.145] hover:bg-black/[.05] dark:hover:bg-white/[.06]"
+              }`}
             >
               {category}
             </Link>
