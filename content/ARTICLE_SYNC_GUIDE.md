@@ -76,8 +76,9 @@ published: true
 1. 将图片保存到 `public/images/articles/` 目录
 2. 在Markdown中引用：
    ```markdown
-   ![图片描述]()
+   ![图片描述](/images/articles/your-image.jpg)
    ```
+   **注意**：图片路径必须以 `/` 开头，从 public 目录开始的绝对路径。
 
 ### 6. 提交到Git
 
