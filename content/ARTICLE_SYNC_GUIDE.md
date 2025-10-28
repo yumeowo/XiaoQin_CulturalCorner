@@ -29,7 +29,6 @@ qinhuangdao-food-culture.md
 ```markdown
 ---
 title: "文章标题"
-slug: "url-friendly-slug"
 date: "YYYY-MM-DD"
 author: "小秦文化角"
 category: "景点|文化|美食|活动"
