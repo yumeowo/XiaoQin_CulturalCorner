@@ -11,7 +11,7 @@ const mapData: { [key: string]: React.ReactNode } = {
   "形状 1": (
     <div>
       <h3 className="font-bold text-sm md:text-base">区域 1</h3>
-      <p className="text-xs md:text-sm mt-0.5">这是"形状 1"的自定义信息。</p>
+      <p className="text-xs md:text-sm mt-0.5">这是形状 1的自定义信息。</p>
     </div>
   ),
   "形状 2": (
@@ -23,31 +23,31 @@ const mapData: { [key: string]: React.ReactNode } = {
   "形状 3": (
     <div>
       <h3 className="font-bold text-sm md:text-base">区域 3</h3>
-      <p className="text-xs md:text-sm mt-0.5">这是"形状 3"的详细描述。</p>
+      <p className="text-xs md:text-sm mt-0.5">这是形状 3的详细描述。</p>
     </div>
   ),
   "形状 4": (
     <div>
       <h3 className="font-bold text-sm md:text-base">区域 4</h3>
-      <p className="text-xs md:text-sm mt-0.5">这是"形状 4"的详细描述。</p>
+      <p className="text-xs md:text-sm mt-0.5">这是形状 4的详细描述。</p>
     </div>
   ),
   "形状 5": (
     <div>
       <h3 className="font-bold text-sm md:text-base">区域 5</h3>
-      <p className="text-xs md:text-sm mt-0.5">这是"形状 5"的详细描述。</p>
+      <p className="text-xs md:text-sm mt-0.5">这是形状 5的详细描述。</p>
     </div>
   ),
   "形状 6": (
     <div>
       <h3 className="font-bold text-sm md:text-base">区域 6</h3>
-      <p className="text-xs md:text-sm mt-0.5">这是"形状 6"的详细描述。</p>
+      <p className="text-xs md:text-sm mt-0.5">这是形状 6的详细描述。</p>
     </div>
   ),
   "形状 7": (
     <div>
       <h3 className="font-bold text-sm md:text-base">区域 7</h3>
-      <p className="text-xs md:text-sm mt-0.5">这是"形状 7"的详细描述。</p>
+      <p className="text-xs md:text-sm mt-0.5">这是形状 7的详细描述。</p>
     </div>
   ),
 };
