@@ -234,7 +234,7 @@ export default function AboutPage() {
 
               {!showQRCode && (
                 <p className="mt-6 text-sm text-blue-100">
-                  微信搜索 "小秦文化角" 或点击按钮查看二维码
+                  微信搜索 &ldquo;小秦文化角&rdquo; 或点击按钮查看二维码
                 </p>
               )}
             </div>
@@ -310,18 +310,6 @@ export default function AboutPage() {
             opacity: 1;
             transform: translateY(0);
           }
-        }
-
-        .animate-fade-in {
-          animation: fadeIn 1s ease-out;
-        }
-
-        .animate-slide-down {
-          animation: slideDown 0.8s ease-out;
-        }
-
-        .animate-slide-up {
-          animation: slideUp 0.8s ease-out 0.2s both;
         }
       `}</style>
     </div>
