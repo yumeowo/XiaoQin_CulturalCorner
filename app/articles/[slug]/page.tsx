@@ -75,19 +75,20 @@ export default async function ArticlePage({ params }: ArticlePageProps) {
 
       {/* Article Header */}
       <header className="mb-12">
-        <div className="mb-4 flex items-center gap-3 text-sm text-gray-600 dark:text-gray-400">
-          <span className="px-3 py-1 bg-black/[.05] dark:bg-white/[.06] rounded">
+        <div className="mb-4 flex flex-wrap items-center gap-2 sm:gap-3 text-xs sm:text-sm text-gray-600 dark:text-gray-400">
+          <span className="px-2 sm:px-3 py-1 bg-black/[.05] dark:bg-white/[.06] rounded">
             {article.category}
           </span>
           <time>{article.date}</time>
-          <span>作者：{article.author}</span>
+          <span className="hidden sm:inline">作者：{article.author}</span>
+          <span className="sm:hidden">{article.author}</span>
         </div>
 
-        <h1 className="text-4xl md:text-5xl font-bold mb-6">
+        <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold mb-4 sm:mb-6 leading-tight">
           {article.title}
         </h1>
 
-        <p className="text-xl text-gray-600 dark:text-gray-400">
+        <p className="text-base sm:text-lg md:text-xl text-gray-600 dark:text-gray-400 leading-relaxed">
           {article.excerpt}
         </p>
 
@@ -129,9 +130,9 @@ export default async function ArticlePage({ params }: ArticlePageProps) {
               <Link
                 key={related.slug}
                 href={`/articles/${related.slug}`}
-                className="group"
+                className="group block"
               >
-                <article className="border border-black/[.08] dark:border-white/[.145] rounded-lg p-4 hover:shadow-lg transition-shadow">
+                <article className="border border-black/[.08] dark:border-white/[.145] rounded-lg p-4 hover:shadow-xl hover:-translate-y-1 transition-all duration-300 active:scale-98">
                   <div className="flex items-center gap-2 text-xs text-gray-600 dark:text-gray-400 mb-2">
                     <span className="px-2 py-0.5 bg-black/[.05] dark:bg-white/[.06] rounded">
                       {related.category}

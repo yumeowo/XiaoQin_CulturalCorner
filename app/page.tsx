@@ -8,11 +8,11 @@ export default function Home() {
     <>
       <div className="relative flex items-center justify-center min-h-[calc(100vh-4rem)] overflow-hidden">
         {/* Hero Section */}
-        <div className="text-center px-4 py-20 relative z-10">
-          <h1 className="text-5xl md:text-7xl font-bold mb-6 bg-gradient-to-r from-gray-900 to-gray-600 dark:from-gray-100 dark:to-gray-400 bg-clip-text text-transparent animate-slide-down">
+        <div className="text-center px-4 sm:px-6 py-16 sm:py-20 relative z-10">
+          <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-7xl font-bold mb-4 sm:mb-6 bg-gradient-to-r from-gray-900 to-gray-600 dark:from-gray-100 dark:to-gray-400 bg-clip-text text-transparent animate-slide-down leading-tight">
             小秦文化角 | 探索秦皇岛的魅力
           </h1>
-          <p className="text-xl md:text-2xl text-gray-600 dark:text-gray-400 max-w-2xl mx-auto animate-slide-up opacity-0" style={{ animationDelay: '0.2s', animationFillMode: 'forwards' }}>
+          <p className="text-base sm:text-lg md:text-xl lg:text-2xl text-gray-600 dark:text-gray-400 max-w-2xl mx-auto animate-slide-up opacity-0 leading-relaxed" style={{ animationDelay: '0.2s', animationFillMode: 'forwards' }}>
             从山海关的雄伟到北戴河的浪漫，这里是您了解秦皇岛历史、文化和旅游景点的数字窗口
           </p>
 

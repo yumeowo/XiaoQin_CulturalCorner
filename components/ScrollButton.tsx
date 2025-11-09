@@ -18,11 +18,11 @@ export default function ScrollButton({ targetId }: ScrollButtonProps) {
   return (
     <button
       onClick={handleClick}
-      className="absolute bottom-8 left-1/2 -translate-x-1/2 animate-bounce cursor-pointer bg-transparent border-none p-2 hover:scale-110 transition-transform duration-300"
+      className="absolute bottom-8 left-1/2 -translate-x-1/2 animate-bounce cursor-pointer bg-transparent border-none p-4 hover:scale-110 active:scale-95 transition-transform duration-300 rounded-full hover:bg-black/5 dark:hover:bg-white/5"
       aria-label="滚动到最新文章"
     >
       <svg
-        className="w-6 h-6 text-gray-400 dark:text-gray-600"
+        className="w-8 h-8 text-gray-400 dark:text-gray-600"
         fill="none"
         stroke="currentColor"
         viewBox="0 0 24 24"
