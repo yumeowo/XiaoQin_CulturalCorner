@@ -24,19 +24,21 @@ export default async function ArticlesPage(props: {
   return (
     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
       {/* Header */}
-      <div className="mb-12">
-        <h1 className="text-4xl md:text-5xl font-bold mb-4">文章列表</h1>
-        <p className="text-gray-600 dark:text-gray-400">
+      <div className="mb-12 animate-fade-in">
+        <h1 className="text-4xl md:text-5xl font-bold mb-4 animate-slide-down">
+          文章列表
+        </h1>
+        <p className="text-gray-600 dark:text-gray-400 animate-slide-up opacity-0" style={{ animationDelay: '0.1s', animationFillMode: 'forwards' }}>
           探索秦皇岛的历史文化与美景，同步自微信公众号&ldquo;小秦文化角&rdquo;
         </p>
       </div>
 
       {/* Categories Filter */}
       {categories.length > 0 && (
-        <div className="mb-8 flex flex-wrap gap-3">
+        <div className="mb-8 flex flex-wrap gap-3 animate-fade-in-up opacity-0" style={{ animationDelay: '0.2s', animationFillMode: 'forwards' }}>
           <Link
             href="/articles"
-            className={`px-4 py-2 rounded-full text-sm border transition-colors ${
+            className={`px-4 py-2 rounded-full text-sm border transition-all duration-300 hover:scale-105 hover:shadow-md ${
               !selectedCategory
                 ? "bg-black text-white dark:bg-white dark:text-black border-black dark:border-white"
                 : "border-black/[.08] dark:border-white/[.145] hover:bg-black/[.05] dark:hover:bg-white/[.06]"
@@ -48,7 +50,7 @@ export default async function ArticlesPage(props: {
             <Link
               key={category}
               href={`/articles?category=${category}`}
-              className={`px-4 py-2 rounded-full text-sm border transition-colors ${
+              className={`px-4 py-2 rounded-full text-sm border transition-all duration-300 hover:scale-105 hover:shadow-md ${
                 selectedCategory === category
                   ? "bg-black text-white dark:bg-white dark:text-black border-black dark:border-white"
                   : "border-black/[.08] dark:border-white/[.145] hover:bg-black/[.05] dark:hover:bg-white/[.06]"
@@ -73,9 +75,9 @@ export default async function ArticlesPage(props: {
             <Link
               key={article.slug}
               href={`/articles/${article.slug}`}
-              className="group"
+              className="group block"
             >
-              <article className="border border-black/[.08] dark:border-white/[.145] rounded-lg overflow-hidden hover:shadow-lg transition-shadow">
+              <article className="h-full border border-black/[.08] dark:border-white/[.145] rounded-lg overflow-hidden hover:shadow-xl hover:-translate-y-2 transition-all duration-300">
                 {/* Cover Image */}
                 <div className="aspect-video bg-gradient-to-br from-gray-100 to-gray-200 dark:from-gray-800 dark:to-gray-900 relative overflow-hidden">
                   {article.coverImage ? (
@@ -83,11 +85,11 @@ export default async function ArticlesPage(props: {
                       src={article.coverImage}
                       alt={article.title}
                       fill
-                      className="object-cover"
+                      className="object-cover group-hover:scale-110 transition-transform duration-500"
                       sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                     />
                   ) : (
-                    <div className="absolute inset-0 flex items-center justify-center text-gray-400 dark:text-gray-600">
+                    <div className="absolute inset-0 flex items-center justify-center text-gray-400 dark:text-gray-600 group-hover:scale-110 transition-transform duration-500">
                       <svg
                         className="w-16 h-16"
                         fill="none"
@@ -131,7 +133,7 @@ export default async function ArticlesPage(props: {
                       {article.tags.slice(0, 3).map((tag) => (
                         <span
                           key={tag}
-                          className="text-xs px-2 py-1 bg-black/[.03] dark:bg-white/[.03] rounded"
+                          className="text-xs px-2 py-1 bg-black/[.03] dark:bg-white/[.03] rounded group-hover:bg-black/[.06] dark:group-hover:bg-white/[.06] transition-colors duration-300"
                         >
                           #{tag}
                         </span>
