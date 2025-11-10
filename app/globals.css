@@ -51,6 +51,34 @@ body {
   animation: fade-in 1s ease-out;
 }
 
+/* 向上滚动动画 - 用于左侧图片 */
+@keyframes scroll-up {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(-33.33%);
+  }
+}
+
+.animate-scroll-up {
+  animation: scroll-up 60s linear infinite;
+}
+
+/* 向下滚动动画 - 用于右侧图片 */
+@keyframes scroll-down {
+  0% {
+    transform: translateY(-33.33%);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+.animate-scroll-down {
+  animation: scroll-down 60s linear infinite;
+}
+
 /* Markdown Prose Styles */
 .prose {
   @apply text-gray-900 dark:text-gray-100;

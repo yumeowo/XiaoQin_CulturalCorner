@@ -25,9 +25,9 @@ const MapTooltip: React.FC<MapTooltipProps> = ({ visible, x, y, children }) => {
   }
 
   // 计算位置，确保不超出视口边界
-  const offset = 15;
-  const maxWidth = 200; // Tooltip 最大宽度（估算）
-  const maxHeight = 100; // Tooltip 最大高度（估算）
+  const offset = 10;
+  const maxWidth = 300; // Tooltip 最大宽度（估算，适应图片显示）
+  const maxHeight = 350; // Tooltip 最大高度（估算，适应图片显示）
 
   let finalX = x + offset;
   let finalY = y + offset;
@@ -42,9 +42,19 @@ const MapTooltip: React.FC<MapTooltipProps> = ({ visible, x, y, children }) => {
     finalY = y - maxHeight - offset;
   }
 
+  // 确保不会超出左边界
+  if (finalX < 0) {
+    finalX = offset;
+  }
+
+  // 确保不会超出上边界
+  if (finalY < 0) {
+    finalY = offset;
+  }
+
   return (
     <div
-      className="fixed bg-white border border-gray-300 shadow-md md:shadow-lg rounded-md p-2 md:p-3 z-50 pointer-events-none transition-opacity duration-150 max-w-[180px] md:max-w-xs"
+      className="fixed bg-white border border-gray-300 shadow-md md:shadow-lg rounded-md p-2 md:p-3 z-50 pointer-events-none transition-opacity duration-150 w-64 md:w-72"
       style={{
         // 使用 fixed 定位配合 clientX/Y 坐标
         left: `${finalX}px`,

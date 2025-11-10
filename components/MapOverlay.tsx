@@ -1,6 +1,7 @@
 "use client"; // 声明为客户端组件，因为我们需要使用 useState 和事件监听
 
 import React, { useState } from 'react';
+import Image from 'next/image';
 import MapTooltip from './MapTooltip'; // 引入我们刚创建的 Tooltip
 
 // --- 自定义信息内容 ---
@@ -9,45 +10,134 @@ import MapTooltip from './MapTooltip'; // 引入我们刚创建的 Tooltip
 // 移动端优化：使用响应式字体大小
 const mapData: { [key: string]: React.ReactNode } = {
   "形状 1": (
-    <div>
-      <h3 className="font-bold text-sm md:text-base">区域 1</h3>
-      <p className="text-xs md:text-sm mt-0.5">这是形状 1的自定义信息。</p>
+    <div className="space-y-2">
+      <h3 className="font-bold text-sm md:text-base text-center mb-2 text-gray-900 opacity-100">祖山</h3>
+      <div className="space-y-2">
+        <div className="relative w-full h-28 md:h-32 rounded overflow-hidden">
+          <Image
+            src="/map/1/zu-shan-1.jpg"
+            alt="祖山"
+            fill
+            sizes="(max-width: 768px) 256px, 288px"
+            className="object-cover"
+          />
+        </div>
+        <div className="relative w-full h-28 md:h-32 rounded overflow-hidden">
+          <Image
+            src="/map/1/zu-shan-2.jpg"
+            alt="祖山"
+            fill
+            sizes="(max-width: 768px) 256px, 288px"
+            className="object-cover"
+          />
+        </div>
+      </div>
     </div>
   ),
   "形状 2": (
-    <div>
-      <h3 className="font-bold text-sm md:text-base">区域 2</h3>
-      <p className="text-xs md:text-sm mt-0.5">您可以放入图片、列表等任何 React 元素。</p>
+    <div className="space-y-2">
+      <h3 className="font-bold text-sm md:text-base text-center mb-2 text-gray-900 opacity-100">求仙入海处</h3>
+      <div className="relative w-full h-36 md:h-40 rounded overflow-hidden">
+        <Image
+          src="/map/2/qiu-xian-ru-hai-chu.jpg"
+          alt="秋仙入海处"
+          fill
+          sizes="(max-width: 768px) 256px, 288px"
+          className="object-cover"
+        />
+      </div>
     </div>
   ),
   "形状 3": (
-    <div>
-      <h3 className="font-bold text-sm md:text-base">区域 3</h3>
-      <p className="text-xs md:text-sm mt-0.5">这是形状 3的详细描述。</p>
+    <div className="space-y-2">
+      <h3 className="font-bold text-sm md:text-base text-center mb-2 text-gray-900 opacity-100">山海关 &middot; 孟姜女庙</h3>
+      <div className="space-y-2">
+        <div className="relative w-full h-28 md:h-32 rounded overflow-hidden">
+          <Image
+            src="/map/3/shan-hai-guan.jpg"
+            alt="山海关"
+            fill
+            sizes="(max-width: 768px) 256px, 288px"
+            className="object-cover"
+          />
+        </div>
+        <div className="relative w-full h-28 md:h-32 rounded overflow-hidden">
+          <Image
+            src="/map/3/meng-jiang-nv-miao.jpg"
+            alt="孟姜女庙"
+            fill
+            sizes="(max-width: 768px) 256px, 288px"
+            className="object-cover"
+          />
+        </div>
+      </div>
     </div>
   ),
   "形状 4": (
-    <div>
-      <h3 className="font-bold text-sm md:text-base">区域 4</h3>
-      <p className="text-xs md:text-sm mt-0.5">这是形状 4的详细描述。</p>
+    <div className="space-y-2">
+      <h3 className="font-bold text-sm md:text-base text-center mb-2 text-gray-900 opacity-100">鸽子窝公园</h3>
+      <div className="relative w-full h-36 md:h-40 rounded overflow-hidden">
+        <Image
+          src="/map/4/ge-zi-wo.jpg"
+          alt="鸽子窝"
+          fill
+          sizes="(max-width: 768px) 256px, 288px"
+          className="object-cover"
+        />
+      </div>
     </div>
   ),
   "形状 5": (
-    <div>
-      <h3 className="font-bold text-sm md:text-base">区域 5</h3>
-      <p className="text-xs md:text-sm mt-0.5">这是形状 5的详细描述。</p>
+    <div className="space-y-2">
+      <h3 className="font-bold text-sm md:text-base text-center mb-2 text-gray-900 opacity-100">抚宁旅游区</h3>
+      <div className="relative w-full h-36 md:h-40 rounded overflow-hidden">
+        <Image
+          src="/map/5/lv-you-qu.jpg"
+          alt="抚宁旅游区"
+          fill
+          sizes="(max-width: 768px) 256px, 288px"
+          className="object-cover"
+        />
+      </div>
     </div>
   ),
   "形状 6": (
-    <div>
-      <h3 className="font-bold text-sm md:text-base">区域 6</h3>
-      <p className="text-xs md:text-sm mt-0.5">这是形状 6的详细描述。</p>
+    <div className="space-y-2">
+      <h3 className="font-bold text-sm md:text-base text-center mb-2 text-gray-900 opacity-100">卢龙县</h3>
+      <div className="relative w-full h-36 md:h-40 rounded overflow-hidden">
+        <Image
+          src="/map/6/lu-long-xian.jpg"
+          alt="卢龙县"
+          fill
+          sizes="(max-width: 768px) 256px, 288px"
+          className="object-cover"
+        />
+      </div>
     </div>
   ),
   "形状 7": (
-    <div>
-      <h3 className="font-bold text-sm md:text-base">区域 7</h3>
-      <p className="text-xs md:text-sm mt-0.5">这是形状 7的详细描述。</p>
+    <div className="space-y-2">
+      <h3 className="font-bold text-sm md:text-base text-center mb-2 text-gray-900 opacity-100">翡翠岛</h3>
+      <div className="space-y-2">
+        <div className="relative w-full h-28 md:h-32 rounded overflow-hidden">
+          <Image
+            src="/map/7/fei-cui-dao-1.jpg"
+            alt="翡翠岛"
+            fill
+            sizes="(max-width: 768px) 256px, 288px"
+            className="object-cover"
+          />
+        </div>
+        <div className="relative w-full h-28 md:h-32 rounded overflow-hidden">
+          <Image
+            src="/map/7/fei-cui-dao-2.jpg"
+            alt="翡翠岛"
+            fill
+            sizes="(max-width: 768px) 256px, 288px"
+            className="object-cover"
+          />
+        </div>
+      </div>
     </div>
   ),
 };
